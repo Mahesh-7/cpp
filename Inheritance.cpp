@@ -36,7 +36,7 @@ Base1::~Base1()
 }
 
 
-class Derived : public Base1
+class Derived : public Base1,public Base
 {
 	public:
 		Derived();
@@ -55,5 +55,5 @@ Derived::~Derived()
 
 int main()
 {
-	Derived d1;	
+	Derived d2;	
 }

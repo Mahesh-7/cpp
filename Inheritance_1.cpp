@@ -9,6 +9,7 @@ class A
 		A(int a);
 };
 
+
 A::A(int a)
 {
 	std::cout<<"The value of A is : " <<a<<std::endl;
@@ -41,6 +42,7 @@ class C : public B
 		C(int a, int b, int c);
 };
 
+
 C::C(int a,int b, int c) :  B(a,b)
 {
 	std::cout<<"The value of c is : " << c <<std::endl;
@@ -50,7 +52,7 @@ C::C(int a,int b, int c) :  B(a,b)
 
 int main()
 {
-	C c(1,2,3);
+	C d(1,2,3);
 }
 
 

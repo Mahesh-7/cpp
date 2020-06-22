@@ -17,8 +17,8 @@ class Test
 
 Test::Test(const Test &x)
 {
-	a = x.a;
-	b = x.b;
+	this->a = x.a; //to avoid same arg used this pointer
+	this->b = x.b;
 }
 
 Test::Test(int x,int y)

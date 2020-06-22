@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-using namespace std;  // if not written -> "accessed function or data" is not declared in this scope
+using namespace std ;// if not written -> "accessed function or data" is not declared in this scope
 
 /*
 Syntax:
@@ -16,6 +16,9 @@ Class ClassName
 
 class Class1
 {
+	protected:
+		int demo;
+		
 	private:
 		int Data;
 		int Data1;
@@ -25,15 +28,20 @@ class Class1
 		void Set_Data(int temp);
 		int Get_Data(void);
 		
+
+		
 		void Set_Data1(int Temp)
 		{
 			Data1 = Temp;
+			demo =Temp;
 		}
 		
 		int Get_Data1(void)
 		{
-			return Data1;
+			//return Data1;
+			return demo;
 		}
+
 };
 
 void Class1::Set_Data(int temp)
@@ -50,13 +58,14 @@ int Class1::Get_Data(void)
 int main()
 {
 	Class1 c1;
-	c1.a1 = 10;
+	//c1.a1 = 10;
+	
 	
 	c1.Set_Data(15);
 	
 	c1.Set_Data1(25);
 	
-	cout<<c1.a1<<endl;
+	//cout<<c1.a1<<endl;
 	cout<<c1.Get_Data()<<endl;
 	cout<<c1.Get_Data1()<<endl;
 }

@@ -27,30 +27,37 @@ void TestFunction()
 
 class Test1
 {
-	private:
+	public:
 		int x; 
 		int y;
 	
 	public:
-		Test1(int a,int b);
-		~Test1();
+		Test1(int a,int b){
+			cout<<"Object created"<<a<<b<<endl;
+		}
+		~Test1()
+		{
+			cout<<"Object erased!"<<endl;
+		}
 };
 
+/* 
 Test1::Test1(int a,int b):x(a),y(b)
 {
-	cout<<"Object created";
+	cout<<"Object created"<<a<<b<<endl;
 }
 
 Test1::~Test1()
 {
-	cout<<"Object erased!";
+
+	cout<<"Object erased!"<<endl;
 }
-
-
+*/
 
 void TestFunction1()
 {
-	Test1 t1(1,2);
+	Test1 t1(2,3);
+	//t1.Test1(1,2);
 }
 
 int main()
