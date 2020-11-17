@@ -38,7 +38,7 @@ class mobile  //user global class definition
 }mob("welcome to mobile world");   // Create an global object of MyClass with constructor argument
 
 
-void mobile::mob_spec(string msg)
+void mobile::mob_spec(string msg) //return type must for normal function call 
 {
 	cout<<msg<<endl<<mob.brand<<" "<<mob.model<<" "<<mob.price<<endl;    //attribute access outside class
 }
