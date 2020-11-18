@@ -12,7 +12,7 @@ class Shape {
          width = a;
          height = b;
       }
-      virtual int area() {
+      virtual int area() {    //without virtual keyword we cant use area function in another derived class and data wont update
          cout << "Parent class area :" <<endl;
          return 0;
       }
@@ -20,7 +20,7 @@ class Shape {
 class Rectangle: public Shape {
 	
    public:
-      Rectangle( int a = 0, int b = 0):Shape(a, b) { }
+      Rectangle( int a = 0, int b = 0):Shape(a, b) { } //to access base class constructor ,have to derive function
       
       int area () { 
       
@@ -43,11 +43,13 @@ class Triangle: public Shape {
 int main() {
 	
    Shape *shape;
-   Rectangle rec(10,7);
-   Triangle  tri(10,5);
+   
+   Rectangle rec(10,7);  //constructor call
+   
+   Triangle  tri(10,5);  //constructor call
 
    // store the address of Rectangle
-   shape = &rec;
+   shape = &rec;  
    
    // call rectangle area.
    cout<<shape->area()<<endl;
