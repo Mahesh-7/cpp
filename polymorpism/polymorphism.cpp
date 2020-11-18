@@ -9,10 +9,10 @@ using namespace std;
 // Base class
 class Animal {
   public:
-    void animalSound1() {
+    void animalSound() {
     cout << "The animal makes a sound \n" ;
   }
-      void animalSound1(string msg) {
+      void animalSound(string msg) {
     cout << "The animal makes a sound "<<msg<<endl ;
   }
 };
@@ -43,7 +43,7 @@ int main() {
   myAnimal.animalSound("different");
   myPig.animalSound();
   myDog.animalSound();
-  obj.animalSound("different");  //we cant Access base class function while same function name (i.e) polymorphism  
+ // myDog.animalSound("different");  //we cant Access base class function while same function name even derived class with public scope (i.e) polymorphism  
   								//have to create individual obj for class to access function with same name
   
 
