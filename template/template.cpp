@@ -3,7 +3,7 @@
 using namespace std; 
 
 
-/*
+
 template<typename t>  //template works for all data types by replace template name
 
 t print(t a,t b)
@@ -16,7 +16,7 @@ int main()
 	cout<<print<double>(5.5,7.0)<<endl; // call myMax for double 
 	cout<<print<char>('a','z')<<endl; // call myMax for char
 }
-*/
+
 
 /*
 template<class T, class U> 
